@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_buzz/components/my_button.dart';
 import 'package:food_buzz/components/my_textfeild.dart';
+import 'package:food_buzz/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? onTap;
@@ -13,6 +14,20 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+// Login mathod for authentecation 
+
+void login(){
+//fill out authentication 
+
+
+//navigate to home page
+Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomePage(),),);
+
+}
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +70,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 10),
               MyButton(
                 text: "Sign In",
-                onTap: () {
-                  // Add your sign-in logic here
-                },
+                onTap: login,
               ),
               const SizedBox(height: 25),
               Row(
